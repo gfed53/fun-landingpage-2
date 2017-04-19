@@ -1,0 +1,42 @@
+#cards
+	display: flex
+	flex-flow: row wrap
+	margin-bottom: 3em
+	.card-container
+		margin: 1em auto
+		display: inline-block
+		-webkit-flex: 3 1 auto
+		-moz-flex: 3
+		-ms-flex: 3
+		flex: 3 1 auto
+		.card-inner
+			figure
+				margin: 0 auto
+				width: 15em
+				height: 18em
+				img
+					width: inherit
+			figcaption
+				margin: 0 1em
+				text-align: center
+
+
+@media screen and ($mobile-fix1)
+	#cards
+		.card-container
+			.card-inner
+				figure
+					width: 20em
+					height: 22em
+
+
+@media screen and ($tablet)
+	#cards
+		.card-container
+			-webkit-box-flex: 1 1 22em
+			-webkit-flex: 1 1 22em
+			-moz-flex: 1
+			-ms-flex: 1
+			flex: 1 1 22em
+			
+

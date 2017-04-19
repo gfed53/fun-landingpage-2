@@ -1,0 +1,29 @@
+* 
+	box-sizing: border-box
+	margin: 0
+	border: 0 none
+	position: relative
+	outline: none
+
+
+*:before, *:after
+	box-sizing: inherit
+
+.grid
+	margin: 0.5em
+	margin-top: 4em
+
+
+.hidden
+	display: none
+
+.visually-hidden
+	opacity: 0
+
+.nav-item-hidden
+	opacity: 0
+	transition: 700ms ease-in-out all
+
+@media screen and ($mobile-fix1)
+	.grid
+		margin: 2em
