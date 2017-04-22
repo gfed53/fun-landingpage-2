@@ -43,7 +43,7 @@
     margin: 2em; } }
 
 .grid {
-  color: #2C3E50; }
+  color: #046380; }
 
 p {
   margin: 0.5em; }
@@ -75,6 +75,108 @@ header #bg-container {
       left: 2em;
       font-size: 3em; } }
 
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: white; }
+
+.nav-brand {
+  font-size: 1.3em;
+  left: 1em; }
+
+.nav-inner ul li {
+  list-style-type: none;
+  padding: 0.9em; }
+  .nav-inner ul li a {
+    text-decoration: none;
+    color: white; }
+
+.nav-lg {
+  display: none; }
+
+.navbar-container {
+  height: 3.5em;
+  background: black;
+  box-shadow: 1px 1px 2px #000;
+  z-index: 99; }
+  .navbar-container .nav-brand {
+    top: 0.75em; }
+  .navbar-container .nav-toggle-container {
+    z-index: 100;
+    text-align: right; }
+    .navbar-container .nav-toggle-container #nav-toggle {
+      right: 4em; }
+    .navbar-container .nav-toggle-container #nav-toggle span {
+      position: absolute;
+      left: 50%;
+      right: 50%; }
+    .navbar-container .nav-toggle-container #nav-toggle span, .navbar-container .nav-toggle-container #nav-toggle span:before, .navbar-container .nav-toggle-container #nav-toggle span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: white;
+      position: absolute;
+      display: block;
+      content: '';
+      transition: all 500ms ease-in-out; }
+    .navbar-container .nav-toggle-container #nav-toggle span:before {
+      top: -10px; }
+    .navbar-container .nav-toggle-container #nav-toggle span:after {
+      bottom: -10px; }
+    .navbar-container .nav-toggle-container #nav-toggle.active span {
+      background-color: transparent; }
+    .navbar-container .nav-toggle-container #nav-toggle.active span:before, .navbar-container .nav-toggle-container #nav-toggle.active span:after {
+      top: 0; }
+    .navbar-container .nav-toggle-container #nav-toggle.active span:before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .navbar-container .nav-toggle-container #nav-toggle.active span:after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+
+.nav-links-mobile-container {
+  display: none;
+  z-index: 98;
+  position: fixed;
+  top: -10.7em;
+  width: 100%;
+  background: black;
+  color: white;
+  transition: 300ms ease-in-out all; }
+  .nav-links-mobile-container .nav-links-mobile {
+    padding: 0; }
+  .nav-links-mobile-container ul li {
+    opacity: 0;
+    text-align: center; }
+
+.nav-links-mobile-container.enter {
+  display: block;
+  opacity: 0;
+  transition: 300ms ease-in-out all; }
+
+.nav-links-mobile-container.enter.enter-active {
+  opacity: 1;
+  -webkit-transform: translateY(14em);
+          transform: translateY(14em); }
+
+.nav-links-mobile-container.leave {
+  display: block;
+  opacity: 0;
+  transition: 300ms ease-in-out all; }
+
+.nav-links-mobile-container.leave.leave-active {
+  display: none; }
+
+.nav-links-mobile-container.active ul li {
+  opacity: 1; }
+
+@media screen and (max-height: 400px) {
+  .nav-links-mobile-container {
+    max-height: 75%;
+    overflow-y: scroll; } }
+
 @media screen and (min-width: 768px) {
   .nav-lg {
     display: block;
@@ -82,7 +184,7 @@ header #bg-container {
     top: 0;
     width: 100%;
     background-color: black;
-    color: #ECF0F1;
+    color: white;
     z-index: 999; }
     .nav-lg .nav-inner {
       position: relative; }
@@ -94,27 +196,10 @@ header #bg-container {
         padding: 0.9em;
         transition: .25s linear all; }
         .nav-lg .nav-inner ul li a {
-          color: #ECF0F1;
+          color: white;
           transition: .25s linear all; }
-        .nav-lg .nav-inner ul li a:before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 1px;
-          bottom: -2px;
-          left: 0;
-          background: white;
-          visibility: hidden;
-          border-radius: 5px;
-          -webkit-transform: scaleX(0);
-                  transform: scaleX(0);
-          transition: .25s linear; }
       .nav-lg .nav-inner ul li:hover a {
         color: white; }
-      .nav-lg .nav-inner ul li:hover a:before {
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-                transform: scaleX(1); }
   .nav-mobile {
     display: none; } }
 
@@ -199,8 +284,7 @@ footer {
       list-style-type: none;
       margin-bottom: 0.5em; }
     footer .footer-section-links li a {
-      text-decoration: none;
-      color: #3498DB; }
+      text-decoration: none; }
     footer .footer-section-links li a:hover {
       text-decoration: underline; }
   footer .footer-section-main {

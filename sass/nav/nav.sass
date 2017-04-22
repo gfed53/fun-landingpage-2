@@ -1,109 +1,109 @@
-// .nav
-// 	position: fixed
-// 	top: 0
-// 	width: 100%
-// 	color: $light-grey
-// .nav-brand
-// 	font-size: 1.3em
-// 	left: 1em
-// .nav-inner
-// 	ul
-// 		li
-// 			list-style-type: none
-// 			padding: 0.9em
-// 			a
-// 				text-decoration: none
-// 				color: $light-grey
-// .nav-lg
-// 	display: none
+.nav
+	position: fixed
+	top: 0
+	width: 100%
+	color: white
+.nav-brand
+	font-size: 1.3em
+	left: 1em
+.nav-inner
+	ul
+		li
+			list-style-type: none
+			padding: 0.9em
+			a
+				text-decoration: none
+				color: white
+.nav-lg
+	display: none
 
-// .navbar-container
-// 	height: 3.5em
-// 	background: $dark-blue
-// 	box-shadow: 1px 1px 2px #000
-// 	z-index: 99
-// 	.nav-brand
-// 		top: 0.75em
-// 	.nav-toggle-container
-// 		z-index: 100
-// 		text-align: right
+.navbar-container
+	height: 3.5em
+	background: black
+	box-shadow: 1px 1px 2px #000
+	z-index: 99
+	.nav-brand
+		top: 0.75em
+	.nav-toggle-container
+		z-index: 100
+		text-align: right
 		
-// 		#nav-toggle
-// 			right: 4em
-// 		#nav-toggle span
-// 			position: absolute
-// 			left: 50%
-// 			right: 50%
-// 		#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after
-// 			cursor: pointer
-// 			border-radius: 1px
-// 			height: 5px
-// 			width: 35px
-// 			background: white
-// 			position: absolute
-// 			display: block
-// 			content: ''
-// 			transition: all 500ms ease-in-out
+		#nav-toggle
+			right: 4em
+		#nav-toggle span
+			position: absolute
+			left: 50%
+			right: 50%
+		#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after
+			cursor: pointer
+			border-radius: 1px
+			height: 5px
+			width: 35px
+			background: white
+			position: absolute
+			display: block
+			content: ''
+			transition: all 500ms ease-in-out
 
 
-// 		#nav-toggle span:before
-// 			top: -10px
+		#nav-toggle span:before
+			top: -10px
 
-// 		#nav-toggle span:after
-// 			bottom: -10px
+		#nav-toggle span:after
+			bottom: -10px
 
-// 		#nav-toggle.active span
-// 			background-color: transparent
+		#nav-toggle.active span
+			background-color: transparent
 
-// 		#nav-toggle.active span:before, #nav-toggle.active span:after
-// 			top: 0
+		#nav-toggle.active span:before, #nav-toggle.active span:after
+			top: 0
 
-// 		#nav-toggle.active span:before
-// 			transform: rotate(45deg)
+		#nav-toggle.active span:before
+			transform: rotate(45deg)
 
-// 		#nav-toggle.active span:after
-// 			transform: rotate(-45deg)
+		#nav-toggle.active span:after
+			transform: rotate(-45deg)
 
 
-// .nav-links-mobile-container
-// 	display: none
-// 	z-index: 98
-// 	position: fixed
-// 	top: -10.7em
-// 	width: 100%
-// 	background: $darker-blue
-// 	color: $light-grey
-// 	transition: 300ms ease-in-out all
-// 	.nav-links-mobile
-// 		padding: 0
-// 	ul li
-// 		opacity: 0
-// 		text-align: center
+.nav-links-mobile-container
+	display: none
+	z-index: 98
+	position: fixed
+	top: -10.7em
+	width: 100%
+	background: black
+	color: white
+	transition: 300ms ease-in-out all
+	.nav-links-mobile
+		padding: 0
+	ul li
+		opacity: 0
+		text-align: center
 
-// .nav-links-mobile-container.enter
-// 	display: block
-// 	opacity: 0
-// 	transition: 300ms ease-in-out all
+.nav-links-mobile-container.enter
+	display: block
+	opacity: 0
+	transition: 300ms ease-in-out all
 
-// .nav-links-mobile-container.enter.enter-active
-// 	opacity: 1
-// 	transform: translateY(14em)
+.nav-links-mobile-container.enter.enter-active
+	opacity: 1
+	transform: translateY(14em)
 
-// .nav-links-mobile-container.leave
-// 	display: block
-// 	opacity: 0
-// 	transition: 300ms ease-in-out all
+.nav-links-mobile-container.leave
+	display: block
+	opacity: 0
+	transition: 300ms ease-in-out all
 
-// .nav-links-mobile-container.leave.leave-active
-// 	display: none
+.nav-links-mobile-container.leave.leave-active
+	display: none
 
-// .nav-links-mobile-container.active ul li
-// 	opacity: 1
+.nav-links-mobile-container.active ul li
+	opacity: 1
 
-// @media screen and ($mobile-height-fix)
-// 	.nav-links-mobile-container
-// 		max-height: 75%
-// 		overflow-y: scroll
+@media screen and ($mobile-height-fix)
+	.nav-links-mobile-container
+		max-height: 75%
+		overflow-y: scroll
 
 
 @media screen and ($tablet)
@@ -113,7 +113,7 @@
 		top: 0
 		width: 100%
 		background-color: black
-		color: $light-grey
+		color: white
 		z-index: 999
 		.nav-inner
 			position: relative
@@ -126,25 +126,10 @@
 					padding: 0.9em
 					transition: .25s linear all
 					a
-						color: $light-grey
+						color: white
 						transition: .25s linear all
-					a:before
-						content: ""
-						position: absolute
-						width: 100%
-						height: 1px
-						bottom: -2px
-						left: 0
-						background: white
-						visibility: hidden
-						border-radius: 5px
-						transform: scaleX(0)
-						transition: .25s linear
 				li:hover a
 					color: white
-				li:hover a:before
-					visibility: visible
-					transform: scaleX(1)
 	.nav-mobile
 		display: none
 
