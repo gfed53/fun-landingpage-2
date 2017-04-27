@@ -43,6 +43,7 @@
     height: 250px;
     width: 350px; }
 
+/* Carousel */
 @-webkit-keyframes my-cta {
   0% {
     padding: 1.3em 1.5em; }
@@ -114,6 +115,10 @@
   opacity: 0;
   transition: 700ms ease-in-out all; }
 
+@media screen and (min-width: 768px) {
+  .grid {
+    margin-top: 10em; } }
+
 .grid {
   color: #046380; }
 
@@ -123,9 +128,12 @@ p {
 h2 {
   margin: 0 0.3em; }
 
-header #jssor_1 {
-  height: 100vh;
-  background-color: lightgrey; }
+header {
+  height: 100vh; }
+
+@media screen and (min-width: 1024px) {
+  header {
+    margin-top: 4em; } }
 
 .nav {
   position: fixed;
