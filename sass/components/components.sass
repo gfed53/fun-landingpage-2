@@ -48,12 +48,32 @@
 
 .info
 	height: 100vh
-	//Temp placeholder
-	p
+	text-align: center
+	display: flex
+	flex-flow: column
+	align-items: center
+	margin: 3em 0
+	div
+		flex: 1
 		display: inline-block
+	div:nth-of-type(2)
+		margin-top: 2em
 	img
-		height: 250px
-		width: 350px
+		//Temp placeholder
+		// display: block
+		height: 20em
+		width: 26em
+
+
+@media screen and ($tablet)
+	.info
+		flex-flow: row wrap
+		div
+			flex: 1
+	.info:nth-of-type(2)
+		.img-container
+			order: 2
+
 
 /* Carousel */
 
