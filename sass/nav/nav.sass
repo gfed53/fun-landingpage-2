@@ -2,7 +2,7 @@
 	position: fixed
 	top: 0
 	width: 100%
-	color: white
+	color: $dark-blue
 .nav-brand
 	font-size: 1.3em
 	left: 1em
@@ -13,13 +13,14 @@
 			padding: 0.9em
 			a
 				text-decoration: none
-				color: white
+				color: $dark-blue
 .nav-lg
 	display: none
+	box-shadow: 1px 1px 2px $dark-blue
 
 .navbar-container
 	height: 3.5em
-	background: black
+	background: $light-grey
 	box-shadow: 1px 1px 2px #000
 	z-index: 99
 	.nav-brand
@@ -39,7 +40,7 @@
 			border-radius: 1px
 			height: 5px
 			width: 35px
-			background: white
+			background: $light-grey
 			position: absolute
 			display: block
 			content: ''
@@ -71,8 +72,8 @@
 	position: fixed
 	top: -10.7em
 	width: 100%
-	background: black
-	color: white
+	background: $light-grey
+	color: $dark-blue
 	transition: 300ms ease-in-out all
 	.nav-links-mobile
 		padding: 0
@@ -112,8 +113,8 @@
 		position: fixed
 		top: 0
 		width: 100%
-		background-color: black
-		color: white
+		background-color: $light-grey
+		color: $dark-blue
 		z-index: 999
 		.nav-inner
 			position: relative
@@ -126,10 +127,10 @@
 					padding: 0.9em
 					transition: .25s linear all
 					a
-						color: white
+						color: $dark-blue
 						transition: .25s linear all
 				li:hover a
-					color: white
+					color: $dark-blue
 	.nav-mobile
 		display: none
 
