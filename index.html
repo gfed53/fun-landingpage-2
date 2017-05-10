@@ -46,6 +46,16 @@
             /*FIX: I would have to add changes to the margin-top of the grid since this 'responsive' code screws everything else up */
             function ScaleSlider() {
                 var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+
+                // var jssorElem = $('#jssor_1');
+                // console.log(jssorElem);
+                // var jssorHeight = parseInt(jssorElem.css('height'), 10);
+                // var updatedMarginTop = (jssorHeight*0.3);
+                // console.log(jssorHeight);
+                // console.log(updatedMarginTop);
+                // var grid = $('.grid');
+                // grid.css('margin-top', updatedMarginTop+'px');
+
                 if (refSize) {
                     refSize = Math.min(refSize, 1920);
                     jssor_1_slider.$ScaleWidth(refSize);
@@ -166,43 +176,37 @@
 	</nav>
 	<header>
 		<!-- Jumbo will be a carousel of bg images, with a small blurb in each one -->
-		<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:600px;overflow:hidden;visibility:hidden;">
-        <!-- Loading Screen -->
-        <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
-            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-            <div style="position:absolute;display:block;background:url('full-width-car/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
-        </div>
-        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:600px;overflow:hidden;">
-            <div>
-                <img data-u="image" src="assets/new-zeal.jpg" />
-                <div style="position:absolute;top:30px;left:30px;width:480px;height:120px;z-index:0;font-size:50px;color:#ffffff;line-height:60px;"><!-- Jeronimo --></div>
-                <div style="position:absolute;top:300px;left:25%;width:480px;height:120px;z-index:0;font-size:30px;color:#ffffff;line-height:38px;">A new way to travel.</div>
-               <!--  <div style="position:absolute;top:120px;left:650px;width:470px;height:220px;z-index:0;">
-                    <img style="position:absolute;top:0px;left:0px;width:470px;height:220px;z-index:0;" src="full-width-car/img/c-phone-horizontal.png" />
-                    <div style="position:absolute;top:4px;left:45px;width:379px;height:213px;z-index:0; overflow:hidden;">
-                        <img data-u="caption" data-t="0" style="position:absolute;top:0px;left:0px;width:379px;height:213px;z-index:0;" src="full-width-car/img/c-slide-1.jpg" />
-                        <img data-u="caption" data-t="1" style="position:absolute;top:0px;left:379px;width:379px;height:213px;z-index:0;" src="full-width-car/img/c-slide-3.jpg" />
-                    </div>
-                    <img style="position:absolute;top:4px;left:45px;width:379px;height:213px;z-index:0;" src="full-width-car/img/c-navigator-horizontal.png" />
-                    <img data-u="caption" data-t="2" style="position:absolute;top:476px;left:454px;width:63px;height:77px;z-index:0;" src="full-width-car/img/hand.png" />
-                </div> -->
-            </div>
-            <div>
-                <img data-u="image" src="assets/ortler.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="assets/fieldfare.jpg" />
-            </div>
-        </div>
-        <!-- Bullet Navigator -->
-        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
-            <!-- bullet navigator item prototype -->
-            <div data-u="prototype" style="width:16px;height:16px;"></div>
-        </div>
-        <!-- Arrow Navigator -->
-        <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
-        <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
-    </div>
+		<div class="jssor-container">
+			<div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1300px;height:600px;overflow:hidden;visibility:hidden;">
+				<!-- Loading Screen -->
+				<div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
+					<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+					<div style="position:absolute;display:block;background:url('full-width-car/img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+				</div>
+				<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:600px;overflow:hidden;">
+					<div>
+						<img data-u="image" src="assets/new-zeal.jpg" />
+						<div style="position:absolute;top:30px;left:30px;width:480px;height:120px;z-index:0;font-size:50px;color:#ffffff;line-height:60px;"><!-- Jeronimo --></div>
+						<div style="position:absolute;top:300px;left:25%;width:480px;height:120px;z-index:0;font-size:30px;color:#ffffff;line-height:38px;">A new way to travel.</div>
+					</div>
+					<div>
+						<img data-u="image" src="assets/ortler.jpg" />
+					</div>
+					<div>
+						<img data-u="image" src="assets/fieldfare.jpg" />
+					</div>
+				</div>
+				<!-- Bullet Navigator -->
+				<div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+					<!-- bullet navigator item prototype -->
+					<div data-u="prototype" style="width:16px;height:16px;"></div>
+				</div>
+				<!-- Arrow Navigator -->
+				<span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
+				<span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
+			</div>
+		</div>
+		
 	</header>
 	<div class="grid">
 		<!-- Content will be a couple of sections for things like product description, quotes, and will wrap up with a CTA. 
