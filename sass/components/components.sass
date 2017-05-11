@@ -47,43 +47,32 @@
 /* Info Section */
 
 .info
-	height: 100vh
+	// height: 100vh
 	text-align: center
 	display: flex
 	flex-flow: column
 	align-items: center
-	margin: 3em 0
+	padding: 10em 0
+	border-bottom: 1.2px solid $light-grey
 	div
 		flex: 1
 		display: inline-block
 	div:nth-of-type(2)
 		margin-top: 2em
-	img
-		//Temp placeholder
-		// display: block
-		height: 20em
-		width: 26em
-
+	i
+		font-size: 3em
 
 @media screen and ($tablet)
 	.info
 		flex-flow: row wrap
+		padding: 20em 0
 		div
 			flex: 1
+		
 	.info:nth-of-type(2)
 		.img-container
 			order: 2
 
 
-/* Carousel */
 
-// #jssor_1
-// 	position: relative
-// 	margin: 0 auto
-// 	top: 0
-// 	left: 0
-// 	width: inherit
-// 	height: inherit
-// 	overflow: hidden
-// 	visibility: hidden
 
