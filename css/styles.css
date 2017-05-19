@@ -146,8 +146,10 @@ body {
   color: #080b0c; }
 
 .nav-brand {
-  font-size: 1.3em;
-  left: 1em; }
+  position: absolute;
+  top: 0.6em;
+  left: 1em;
+  font-size: 1.5em; }
 
 .nav-inner ul li {
   list-style-type: none;
@@ -252,19 +254,22 @@ body {
     color: #080b0c;
     z-index: 999; }
     .nav-lg .nav-inner {
-      position: relative; }
+      position: relative;
+      text-align: right; }
       .nav-lg .nav-inner ul, .nav-lg .nav-inner li {
         display: inline-block; }
-      .nav-lg .nav-inner ul li {
-        list-style-type: none;
-        cursor: pointer;
-        padding: 0.9em;
-        transition: .25s linear all; }
-        .nav-lg .nav-inner ul li a {
-          color: #080b0c;
+      .nav-lg .nav-inner ul {
+        margin-left: 3em; }
+        .nav-lg .nav-inner ul li {
+          list-style-type: none;
+          cursor: pointer;
+          padding: 0.9em;
           transition: .25s linear all; }
-      .nav-lg .nav-inner ul li:hover a {
-        color: #080b0c; }
+          .nav-lg .nav-inner ul li a {
+            color: #080b0c;
+            transition: .25s linear all; }
+        .nav-lg .nav-inner ul li:hover a {
+          color: #080b0c; }
   .nav-mobile {
     display: none; } }
 
@@ -272,7 +277,12 @@ body {
   .nav-lg .nav-inner {
     left: 1em; }
     .nav-lg .nav-inner ul li {
-      padding: 1.7em; } }
+      padding: 1.7em;
+      transition: 250ms ease-in-out all;
+      border-bottom: 2px solid transparent; }
+    .nav-lg .nav-inner ul li:hover {
+      border-bottom: 2px solid #080b0c;
+      font-weight: bold; } }
 
 #cards {
   display: -webkit-box;

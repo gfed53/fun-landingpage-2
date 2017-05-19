@@ -4,8 +4,10 @@
 	width: 100%
 	color: $black
 .nav-brand
-	font-size: 1.3em
+	position: absolute
+	top: 0.6em
 	left: 1em
+	font-size: 1.5em
 .nav-inner
 	ul
 		li
@@ -118,9 +120,11 @@
 		z-index: 999
 		.nav-inner
 			position: relative
+			text-align: right
 			ul, li 
 				display: inline-block
 			ul
+				margin-left: 3em
 				li
 					list-style-type: none
 					cursor: pointer
@@ -142,6 +146,12 @@
 			ul
 				li
 					padding: 1.7em
+					transition: 250ms ease-in-out all
+					border-bottom: 2px solid transparent
+				li:hover
+					border-bottom: 2px solid $black
+					font-weight: bold 
+
 
 
 
