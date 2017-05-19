@@ -111,7 +111,7 @@ body {
   background-color: #046380; }
 
 .grid section {
-  padding: 10em 0; }
+  padding: 10em 5em; }
 
 .hidden {
   display: none; }
@@ -328,14 +328,14 @@ body {
 .cta {
   text-align: center; }
   .cta input, .cta button {
-    border-radius: 5px;
-    border: 1px solid #080b0c;
-    box-shadow: 0px 1px 0px #080b0c; }
+    border-radius: 5px; }
+  .cta p {
+    margin-bottom: 3em; }
   .cta label {
     margin-right: 0.5em; }
   .cta input {
     color: black;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     padding: 5px; }
   .cta button {
     font-size: 1.5em;
@@ -344,7 +344,7 @@ body {
     background-color: #ECF0F1; }
 
 @media screen and (min-width: 768px) {
-  .cta p {
+  .cta p, .cta label, .cta input {
     font-size: 1.2em; } }
 
 footer {
