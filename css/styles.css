@@ -36,6 +36,7 @@
 /************/
 /* Info Section */
 .info {
+  height: 100vh;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -57,9 +58,6 @@
     margin-top: 2em; }
   .info i {
     font-size: 4em; }
-
-.info:nth-of-type(3) {
-  border-bottom: none; }
 
 @media screen and (min-width: 768px) {
   .info {
@@ -111,7 +109,8 @@ body {
   background-color: #046380; }
 
 .grid section {
-  padding: 10em 5em; }
+  padding: 10em 0;
+  margin: 0 5em; }
 
 .hidden {
   display: none; }
@@ -160,7 +159,7 @@ body {
 
 .nav-lg {
   display: none;
-  box-shadow: 1px 1px 2px #046380; }
+  box-shadow: 1px 1px 2px #080b0c; }
 
 .navbar-container {
   height: 3.5em;
@@ -259,7 +258,7 @@ body {
       .nav-lg .nav-inner ul, .nav-lg .nav-inner li {
         display: inline-block; }
       .nav-lg .nav-inner ul {
-        margin-left: 3em; }
+        margin-right: 2em; }
         .nav-lg .nav-inner ul li {
           list-style-type: none;
           cursor: pointer;
@@ -337,6 +336,8 @@ body {
 
 .cta {
   text-align: center; }
+  .cta .cta-button-container {
+    margin: 2em; }
   .cta input, .cta button {
     border-radius: 5px; }
   .cta p {
@@ -345,7 +346,6 @@ body {
     margin-right: 0.5em; }
   .cta input {
     color: black;
-    margin-bottom: 1em;
     padding: 5px; }
   .cta button {
     font-size: 1.5em;
@@ -359,6 +359,6 @@ body {
 
 footer {
   padding: 3em;
-  background-color: #ECF0F1;
-  color: #080b0c;
+  border-top: 1.2px solid #ECF0F1;
+  color: #ECF0F1;
   text-align: center; }
