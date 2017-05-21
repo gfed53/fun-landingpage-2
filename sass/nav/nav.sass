@@ -5,7 +5,7 @@
 	color: $black
 .nav-brand
 	position: absolute
-	top: 0.6em
+	top: 0.25em
 	left: 1em
 	font-size: 1.5em
 .nav-inner
@@ -26,7 +26,7 @@
 	box-shadow: 1px 1px 2px #000
 	z-index: 99
 	.nav-brand
-		top: 0.75em
+		// top: 0.75em
 	.nav-toggle-container
 		z-index: 100
 		text-align: right
@@ -110,6 +110,8 @@
 
 
 @media screen and ($tablet)
+	.nav-brand
+		// top: 0.25em
 	.nav-lg
 		display: block
 		position: fixed
@@ -140,6 +142,8 @@
 
 
 @media screen and ($desktop)
+	.nav-brand
+		top: 0.7em
 	.nav-lg
 		.nav-inner
 			left: 1em
