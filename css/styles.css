@@ -34,6 +34,44 @@
   background-color: #202020; }
 
 /************/
+/*Carousel*/
+.jcarousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
+
+.jcarousel ul {
+  width: 20000em;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.jcarousel li {
+  float: left; }
+
+.sub-head {
+  position: absolute;
+  top: 4em;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 9999;
+  font-size: 1.7em;
+  color: #ECF0F1; }
+
+.sub-head-third {
+  color: #080b0c; }
+
+img {
+  width: 100%;
+  height: 100vh; }
+
+@media screen and (min-width: 1024px) {
+  .sub-head {
+    left: 40%; } }
+
+/************/
 /* Info Section */
 .info {
   height: 100vh;
