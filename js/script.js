@@ -9,7 +9,8 @@ $(function(){
         items: '.jcarousel-item',
         transitions: true,
         wrap: 'circular',
-        center: true
+        center: true,
+        // vertical: true
     });
 
     $('.jcarousel').jcarouselAutoscroll();
