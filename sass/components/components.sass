@@ -72,6 +72,7 @@
 	transform: translateX(-50%)
 	z-index: 1
 	font-size: 1.5em
+	width: 12em
 	color: $light-grey
 
 // .sub-head-first
@@ -89,6 +90,10 @@ img
     width: 100%
     height: 35em 
 
+@media screen and ($mobile-fix)
+	.sub-head
+		width: inherit
+
 @media screen and ($tablet)
 	img
 		height: 40em
@@ -98,7 +103,7 @@ img
 		left: 40%
 		font-size: 1.7em
 	img
-		height: 100vh
+		height: 45em
 /************/
 
 /* Info Section */
