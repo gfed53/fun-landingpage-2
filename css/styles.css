@@ -92,6 +92,7 @@ img {
 .info-inner {
   transition: 1250ms ease-in-out all;
   opacity: 0;
+  width: 100%;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -133,14 +134,17 @@ img {
       -webkit-box-flex: 1;
           -ms-flex: 1;
               flex: 1; }
-  .info:nth-of-type(odd) .img-container i {
-    margin-right: 4em; }
+  .info:nth-of-type(odd) .img-container {
+    text-align: left; }
+    .info:nth-of-type(odd) .img-container i {
+      margin-left: 1em; }
   .info:nth-of-type(even) .img-container {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
-            order: 2; }
+            order: 2;
+    text-align: right; }
     .info:nth-of-type(even) .img-container i {
-      margin-left: 4em; } }
+      margin-right: 1em; } }
 
 @-webkit-keyframes my-cta {
   0% {
