@@ -256,7 +256,7 @@ body {
       position: absolute;
       display: block;
       content: '';
-      transition: all 500ms ease-in-out; }
+      transition: all 250ms ease-in-out; }
     .navbar-container .nav-toggle-container #nav-toggle span:before {
       top: -10px; }
     .navbar-container .nav-toggle-container #nav-toggle span:after {
@@ -273,37 +273,27 @@ body {
               transform: rotate(-45deg); }
 
 .nav-links-mobile-container {
-  display: none;
   z-index: 98;
   position: fixed;
-  top: -10.7em;
+  top: -13.7em;
   width: 100%;
   background: #ECF0F1;
   color: #080b0c;
-  transition: 300ms ease-in-out all; }
+  transition: 200ms ease-in-out all; }
   .nav-links-mobile-container .nav-links-mobile {
     padding: 0; }
   .nav-links-mobile-container ul li {
-    opacity: 0;
     text-align: center; }
 
 .nav-links-mobile-container.enter {
-  display: block;
-  opacity: 0;
-  transition: 300ms ease-in-out all; }
+  transition: 200ms ease-in-out all; }
 
 .nav-links-mobile-container.enter.enter-active {
-  opacity: 1;
-  -webkit-transform: translateY(14em);
-          transform: translateY(14em); }
+  -webkit-transform: translateY(17em);
+          transform: translateY(17em); }
 
 .nav-links-mobile-container.leave {
-  display: block;
-  opacity: 0;
-  transition: 300ms ease-in-out all; }
-
-.nav-links-mobile-container.leave.leave-active {
-  display: none; }
+  transition: 200ms ease-in-out all; }
 
 .nav-links-mobile-container.active ul li {
   opacity: 1; }
