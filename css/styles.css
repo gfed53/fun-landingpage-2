@@ -217,6 +217,9 @@ body {
   left: 1em;
   font-size: 1.5em; }
 
+.nav-mobile .nav-brand {
+  top: 0.4em; }
+
 .nav-inner ul li {
   list-style-type: none;
   padding: 0.9em; }
@@ -237,7 +240,8 @@ body {
     z-index: 100;
     text-align: right; }
     .navbar-container .nav-toggle-container #nav-toggle {
-      right: 4em; }
+      right: 4em;
+      top: 0.9em; }
     .navbar-container .nav-toggle-container #nav-toggle span {
       position: absolute;
       left: 50%;
@@ -247,7 +251,8 @@ body {
       border-radius: 1px;
       height: 5px;
       width: 35px;
-      background: #ECF0F1;
+      background: #080b0c;
+      top: 11px;
       position: absolute;
       display: block;
       content: '';
