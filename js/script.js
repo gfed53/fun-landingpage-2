@@ -6,6 +6,19 @@ $(function(){
 
 	var $window = $(window);
 	var $infoElems = $('.info-inner');
+
+	var threshold = 100;
+	var scrollTimer;
+	//Cached heights/widths
+	// var window_height;
+	// var window_top_position;
+	// var window_bottom_position;
+	// var $element;
+	// var element_height;
+	// var element_top_position;
+	// var element_bottom_position;
+	// setValues();
+
 	
 	var $navToggle = $('#nav-toggle');
 	var $navLinksMobileContainer = $('.nav-links-mobile-container');
@@ -24,12 +37,10 @@ $(function(){
     $('.jcarousel').jcarouselAutoscroll();
     
 	function init(){
+
 		//Scroll Animations
-		
-
-		$window.on('scroll resize', checkIfInView);
-
-		$window.trigger('scroll');
+		$window.on('scroll resize', _.throttle(checkIfInView, 250));
+		$window.trigger('scroll resize');
 
 		
 
@@ -37,9 +48,44 @@ $(function(){
 
 	}
 
+	function bindScroll(){
+		$window.on('scroll resize', function(){
+
+			setScrollTimer();
+			checkIfInView();
+		});
+	}
+
+	function setScrollTimer(){
+		unbindScroll();
+		scrollTimer = window.setTimeout(function(){
+			bindScroll();
+		}, threshold);
+
+	}
+
+	function unbindScroll(){
+		$window.unbind('scroll');
+	}
+
 	
+	function setValues(){
+		window_height = $window.height();
+		console.log('window_height:',window_height);
+		window_top_position = $window.scrollTop();
+		console.log('window_top_position:',window_top_position);
+		window_bottom_position = (window_top_position + window_height);
+		$.each($infoElems, function() {
+			$element = $(this);
+			element_height = $element.outerHeight();
+			element_top_position = $element.offset().top;
+			element_bottom_position = (element_top_position + element_height);
+		});
+
+	}
 
 	function checkIfInView(){
+		console.log('its running');
 		var window_height = $window.height();
 		var window_top_position = $window.scrollTop();
 		var window_bottom_position = (window_top_position + window_height);
@@ -55,9 +101,12 @@ $(function(){
 			(element_top_position <= window_bottom_position)) {
 				console.log('class added to', $element);
 			$element.addClass('in-view');
-			} else {
+			// $element.velocity({opacity: 1}, {duration: 750});
+			} 
+			else {
 				console.log('class removed from', $element);
 				$element.removeClass('in-view');
+				// $element.velocity({opacity: 0}, {duration: 750});
 			}
 		});
 	}
