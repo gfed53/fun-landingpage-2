@@ -286,7 +286,7 @@ body {
     text-align: center; }
 
 .nav-links-mobile-container.enter {
-  transition: 200ms ease-in-out all; }
+  transition: 200ms cubic-bezier(0.43, 0.11, 0.68, 1.16) all; }
 
 .nav-links-mobile-container.enter.enter-active {
   -webkit-transform: translateY(17em);
@@ -400,8 +400,6 @@ body {
   text-align: center; }
   .cta .cta-button-container {
     margin: 2em; }
-  .cta input, .cta button {
-    border-radius: 5px; }
   .cta p {
     margin-bottom: 3em; }
   .cta label {

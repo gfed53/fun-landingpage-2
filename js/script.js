@@ -39,7 +39,7 @@ $(function(){
 	function init(){
 
 		//Scroll Animations
-		$window.on('scroll resize', _.throttle(checkIfInView, 250));
+		$window.on('scroll resize', _.throttle(checkIfInView, threshold));
 		$window.trigger('scroll resize');
 
 		
@@ -89,12 +89,20 @@ $(function(){
 		var window_height = $window.height();
 		var window_top_position = $window.scrollTop();
 		var window_bottom_position = (window_top_position + window_height);
+		console.log('window_height:',window_height);
+		console.log('window_top_position:',window_top_position);
+		console.log('window_bottom_position:',window_bottom_position);
+		
 
 		$.each($infoElems, function() {
 			var $element = $(this);
 			var element_height = $element.outerHeight();
 			var element_top_position = $element.offset().top;
 			var element_bottom_position = (element_top_position + element_height);
+			console.log('$element:',$element);
+			console.log('element_height:',element_height);
+			console.log('element_top_position:',element_top_position);
+			console.log('element_bottom_position:',element_bottom_position);
 
 			//check to see if this current container is within viewport
 			if ((element_bottom_position >= window_top_position) &&

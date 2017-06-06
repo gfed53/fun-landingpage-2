@@ -72,7 +72,6 @@
 
 
 .nav-links-mobile-container
-	// display: none
 	z-index: 98
 	position: fixed
 	top: -13.7em
@@ -89,21 +88,16 @@
 //Nav Animations
 
 .nav-links-mobile-container.enter
-	// display: block
-	// opacity: 0
-	transition: 200ms ease-in-out all
+	transition: 200ms cubic-bezier(0.43, 0.11, 0.68, 1.16) all
 
 .nav-links-mobile-container.enter.enter-active
-	// opacity: 1
 	transform: translateY(17em)
 
 .nav-links-mobile-container.leave
-	// display: block
-	// opacity: 0
 	transition: 200ms ease-in-out all
 
-.nav-links-mobile-container.leave.leave-active
-	// display: none
+
+//No leave-active necessary
 
 .nav-links-mobile-container.active ul li
 	opacity: 1
