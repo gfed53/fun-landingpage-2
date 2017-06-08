@@ -7,7 +7,7 @@ $(function(){
 	var $window = $(window);
 	var $infoElems = $('.info-inner');
 
-	var threshold = 100;
+	var threshold = 200;
 	var scrollTimer;
 	//Cached heights/widths
 	// var window_height;
@@ -36,11 +36,15 @@ $(function(){
 
     $('.jcarousel').jcarouselAutoscroll();
     
-	function init(){
+    function init(){
 
 		//Scroll Animations
 		$window.on('scroll resize', _.throttle(checkers, threshold));
-		$window.trigger('scroll resize');
+		// $window.trigger('scroll resize');
+
+		AOS.init({
+			duration: 500,
+		});
 
 		
 
@@ -49,7 +53,7 @@ $(function(){
 	}
 
 	function checkers(){
-		checkIfInView();
+		// checkIfInView();
 		navLinksCheck();
 
 	}
@@ -76,55 +80,55 @@ $(function(){
 	}
 
 	
-	function setValues(){
-		window_height = $window.height();
-		console.log('window_height:',window_height);
-		window_top_position = $window.scrollTop();
-		console.log('window_top_position:',window_top_position);
-		window_bottom_position = (window_top_position + window_height);
-		$.each($infoElems, function() {
-			$element = $(this);
-			element_height = $element.outerHeight();
-			element_top_position = $element.offset().top;
-			element_bottom_position = (element_top_position + element_height);
-		});
+	// function setValues(){
+	// 	window_height = $window.height();
+	// 	console.log('window_height:',window_height);
+	// 	window_top_position = $window.scrollTop();
+	// 	console.log('window_top_position:',window_top_position);
+	// 	window_bottom_position = (window_top_position + window_height);
+	// 	$.each($infoElems, function() {
+	// 		$element = $(this);
+	// 		element_height = $element.outerHeight();
+	// 		element_top_position = $element.offset().top;
+	// 		element_bottom_position = (element_top_position + element_height);
+	// 	});
 
-	}
+	// }
 
-	function checkIfInView(){
-		// console.log('its running');
-		var window_height = $window.height();
-		var window_top_position = $window.scrollTop();
-		var window_bottom_position = (window_top_position + window_height);
-		// console.log('window_height:',window_height);
-		console.log('window_top_position:',window_top_position);
-		// console.log('window_bottom_position:',window_bottom_position);
+	// function checkIfInView(){
+	// 	// console.log('its running');
+	// 	var window_height = $window.height();
+	// 	var window_top_position = $window.scrollTop();
+	// 	var window_bottom_position = (window_top_position + window_height);
+	// 	// console.log('window_height:',window_height);
+	// 	console.log('window_top_position:',window_top_position);
+	// 	// console.log('window_bottom_position:',window_bottom_position);
 		
 
-		$.each($infoElems, function() {
-			var $element = $(this);
-			var element_height = $element.outerHeight();
-			var element_top_position = $element.offset().top;
-			var element_bottom_position = (element_top_position + element_height);
-			// console.log('$element:',$element);
-			// console.log('element_height:',element_height);
-			// console.log('element_top_position:',element_top_position);
-			// console.log('element_bottom_position:',element_bottom_position);
+	// 	$.each($infoElems, function() {
+	// 		var $element = $(this);
+	// 		var element_height = $element.outerHeight();
+	// 		var element_top_position = $element.offset().top;
+	// 		var element_bottom_position = (element_top_position + element_height);
+	// 		// console.log('$element:',$element);
+	// 		// console.log('element_height:',element_height);
+	// 		// console.log('element_top_position:',element_top_position);
+	// 		// console.log('element_bottom_position:',element_bottom_position);
 
-			//check to see if this current container is within viewport
-			if ((element_bottom_position >= window_top_position) &&
-			(element_top_position <= window_bottom_position)) {
-				// console.log('class added to', $element);
-			$element.addClass('in-view');
-			// $element.velocity({opacity: 1}, {duration: 750});
-			} 
-			else {
-				// console.log('class removed from', $element);
-				$element.removeClass('in-view');
-				// $element.velocity({opacity: 0}, {duration: 750});
-			}
-		});
-	}
+	// 		//check to see if this current container is within viewport
+	// 		if ((element_bottom_position >= window_top_position) &&
+	// 		(element_top_position <= window_bottom_position)) {
+	// 			// console.log('class added to', $element);
+	// 		$element.addClass('in-view');
+	// 		// $element.velocity({opacity: 1}, {duration: 750});
+	// 		} 
+	// 		else {
+	// 			// console.log('class removed from', $element);
+	// 			$element.removeClass('in-view');
+	// 			// $element.velocity({opacity: 0}, {duration: 750});
+	// 		}
+	// 	});
+	// }
 
 	function navLinksCheck(){
 		var $element = $('.my-social-navbar-vert');

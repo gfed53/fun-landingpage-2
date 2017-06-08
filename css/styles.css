@@ -93,8 +93,6 @@ img {
   border-bottom: 1.2px solid #ECF0F1; }
 
 .info-inner {
-  transition: 1250ms ease-in-out all;
-  opacity: 0;
   width: 100%;
   position: absolute;
   top: 50%;
