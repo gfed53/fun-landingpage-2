@@ -15,7 +15,10 @@
   transition: 200ms linear all; }
 
 .my-social-navbar-vert i:hover {
-  width: 2.3em; }
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+  -webkit-transform-origin: left;
+          transform-origin: left; }
 
 .my-social-navbar-vert a {
   color: white; }
