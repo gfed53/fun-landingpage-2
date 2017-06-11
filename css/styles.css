@@ -96,8 +96,6 @@ img {
   width: 100%;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -276,7 +274,7 @@ body {
 .nav-links-mobile-container {
   z-index: 98;
   position: fixed;
-  top: -13.7em;
+  top: -14em;
   width: 100%;
   background: #ECF0F1;
   color: #080b0c;
