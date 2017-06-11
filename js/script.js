@@ -39,7 +39,7 @@ $(function(){
     function init(){
 
 		//Scroll Animations
-		$window.on('scroll resize', _.throttle(checkers, threshold));
+		// $window.on('scroll resize', _.throttle(checkers, threshold));
 		// $window.trigger('scroll resize');
 
 		AOS.init({
@@ -58,26 +58,26 @@ $(function(){
 
 	}
 
-	function bindScroll(){
-		$window.on('scroll resize', function(){
+	// function bindScroll(){
+	// 	$window.on('scroll resize', function(){
 
-			setScrollTimer();
-			checkIfInView();
+	// 		setScrollTimer();
+	// 		checkIfInView();
 			
-		});
-	}
+	// 	});
+	// }
 
-	function setScrollTimer(){
-		unbindScroll();
-		scrollTimer = window.setTimeout(function(){
-			bindScroll();
-		}, threshold);
+	// function setScrollTimer(){
+	// 	unbindScroll();
+	// 	scrollTimer = window.setTimeout(function(){
+	// 		bindScroll();
+	// 	}, threshold);
 
-	}
+	// }
 
-	function unbindScroll(){
-		$window.unbind('scroll');
-	}
+	// function unbindScroll(){
+	// 	$window.unbind('scroll');
+	// }
 
 	
 	// function setValues(){
