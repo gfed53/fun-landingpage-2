@@ -93,9 +93,9 @@ img {
   border-bottom: 1.2px solid #ECF0F1; }
 
 .info-inner {
+  padding-top: 3em;
   width: 100%;
   position: absolute;
-  top: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,6 +125,7 @@ img {
   .info {
     padding: 20em 0; }
   .info-inner {
+    padding-top: 0;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -175,7 +176,6 @@ body {
   background-color: #00A388; }
 
 .grid section {
-  padding: 10em 0;
   margin: 0 2em; }
 
 .hidden {
@@ -398,8 +398,10 @@ body {
 .cta {
   text-align: center; }
   .cta .cta-button-container {
-    margin: 2em; }
+    margin-top: 2em;
+    margin-bottom: 3em; }
   .cta p {
+    padding-top: 3em;
     margin-bottom: 3em; }
   .cta label {
     margin-right: 0.5em; }
