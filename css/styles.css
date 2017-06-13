@@ -409,6 +409,7 @@ body {
     color: black;
     padding: 5px; }
   .cta button {
+    transition: 150ms ease-in-out all;
     font-size: 1.5em;
     padding: 0.5em;
     color: #080b0c;
@@ -416,7 +417,11 @@ body {
 
 @media screen and (min-width: 768px) {
   .cta p, .cta label, .cta input {
-    font-size: 1.3em; } }
+    font-size: 1.3em; }
+  button:hover {
+    -webkit-transform: translateY(-0.2em);
+            transform: translateY(-0.2em);
+    box-shadow: 3px 2px 2px 2px rgba(128, 128, 128, 0.5); } }
 
 footer {
   padding: 3em;
