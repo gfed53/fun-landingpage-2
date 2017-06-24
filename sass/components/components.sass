@@ -3,11 +3,10 @@
 .my-social-navbar-vert
 	position: fixed
 	padding: 0
-	z-index: 9999
+	z-index: 98
 	top: 10em
 	list-style-type: none
 	text-align: center
-
 
 .my-social-navbar-vert i 
 	width: 2em
@@ -16,11 +15,9 @@
 	cursor: pointer
 	transition: 200ms linear all
 
-
 .my-social-navbar-vert i:hover 
 	transform: scaleX(1.2)
 	transform-origin: left
-
 
 .my-social-navbar-vert a 
 	color: white
@@ -43,14 +40,12 @@
 .fa-envelope 
 	background-color: #202020 
 
-/************/
 
 /*Carousel*/
 
 .jcarousel 
     position: relative
     overflow: hidden
-    // width: 100%
 
 .jcarousel ul 
     width: 20000em
@@ -60,11 +55,8 @@
     margin: 0
     padding: 0
 
-
 .jcarousel li 
     float: left
-    // width: 100%
-    // height: 10em
 
 .sub-head
 	position: absolute
@@ -75,14 +67,6 @@
 	font-size: 1.5em
 	width: 12em
 	color: $light-grey
-
-// .sub-head-first
-// 	top: 6em
-// 	left: 30em
-
-// .sub-head-second
-// 	top: 6em
-// 	left: 40em
 
 .sub-head-third
 	color: $black
@@ -105,7 +89,7 @@ img
 		font-size: 1.7em
 	img
 		height: 45em
-/************/
+
 
 /* Info Section */
 
@@ -113,16 +97,11 @@ img
 	height: 100vh
 	text-align: center
 	border-bottom: 1.2px solid $light-grey
-	
 
 .info-inner
-	// transition: 1250ms ease-in-out all
-	// transition-property: opacity
-	// opacity: 0
 	padding-top: 3em
 	width: 100%
 	position: absolute
-	// top: 50%
 	display: flex
 	flex-flow: column
 	align-items: center
@@ -136,15 +115,13 @@ img
 	p
 		font-size: 1.2em
 
-
 .info-inner.in-view
 	opacity: 1
 
 
-.info:nth-of-type(3)
-	// border-bottom: none
-
 @media screen and ($tablet)
+	/* Info Section */
+
 	.info
 		padding: 20em 0
 
@@ -159,7 +136,6 @@ img
 			text-align: left
 			i
 				margin-left: 1em
-				
 
 	.info:nth-of-type(even)
 		.img-container

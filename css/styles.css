@@ -2,7 +2,7 @@
 .my-social-navbar-vert {
   position: fixed;
   padding: 0;
-  z-index: 9999;
+  z-index: 98;
   top: 10em;
   list-style-type: none;
   text-align: center; }
@@ -36,7 +36,6 @@
 .fa-envelope {
   background-color: #202020; }
 
-/************/
 /*Carousel*/
 .jcarousel {
   position: relative;
@@ -85,7 +84,6 @@ img {
   img {
     height: 45em; } }
 
-/************/
 /* Info Section */
 .info {
   height: 100vh;
@@ -122,6 +120,7 @@ img {
   opacity: 1; }
 
 @media screen and (min-width: 768px) {
+  /* Info Section */
   .info {
     padding: 20em 0; }
   .info-inner {
